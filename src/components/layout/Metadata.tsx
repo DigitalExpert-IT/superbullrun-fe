@@ -33,7 +33,11 @@ export const Metadata: React.FC<MetadataProps> = props => {
   } = props;
   return (
     <Header>
-      {title ? <title>{title} | BULLCUAN</title> : <title>BULLCUAN</title>}
+      {title ? (
+        <title>{title} | SuperBullrun</title>
+      ) : (
+        <title>SuperBullrun</title>
+      )}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <meta name="description" content={description} />
@@ -41,6 +45,23 @@ export const Metadata: React.FC<MetadataProps> = props => {
       <meta name="author" content={author} />
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
       <meta name="copyright" content={copyright} />
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />

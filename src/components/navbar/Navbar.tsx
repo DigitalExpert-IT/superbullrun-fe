@@ -75,7 +75,7 @@ export const Navbar = () => {
                 top={"-2"}
               >
                 <Image
-                  src="/assets/logo/bullrun-logo.png"
+                  src="/assets/logo/footer-logo.png"
                   alt="logo-image"
                   width={500}
                   loading="lazy"
