@@ -14,8 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { Trans, useTranslation } from "react-i18next";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import { LazyVideo } from "components/LazyVideo";
-import { ButtonConnectWallet, ButtonConnectWrapper } from "components/button";
+import { ButtonConnectWrapper } from "components/button";
 import { useAccountMap } from "hooks";
 
 export const SectionHeader = () => {
@@ -33,11 +32,11 @@ export const SectionHeader = () => {
       // bgGradient="linear( to-t, #0A1424 9.97%, #0A1022 12.48%, #092930 124.52%)"
     >
       <Image
-        src="https://ik.imagekit.io/msxxxaegj/BullrunPass/head-pattern.png?updatedAt=1715787786437"
+        src="https://ik.imagekit.io/msxxxaegj/super%20bullrun/pattern.png?updatedAt=1716217884824"
         alt="img-header"
         loading="lazy"
         sizes="100vw"
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: "fill" }}
         z-index="0"
         fill
       />
@@ -52,7 +51,7 @@ export const SectionHeader = () => {
       >
         <AspectRatio w={{ base: "none", md: "md", xl: " xl" }} ratio={1}>
           <Image
-            src="https://ik.imagekit.io/msxxxaegj/BullrunPass/head-image.png?updatedAt=1715787898790"
+            src="https://ik.imagekit.io/msxxxaegj/super%20bullrun/image-header.png?updatedAt=1716217883780"
             alt="head-image"
             style={{ objectFit: "contain" }}
             fill

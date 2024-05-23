@@ -1,4 +1,7 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { ICONS_FOOTER } from "constant/icon";
 import { useTranslation } from "react-i18next";
 import {
   Container,
@@ -10,9 +13,6 @@ import {
   AspectRatio,
   Heading,
 } from "@chakra-ui/react";
-import Image from "next/image";
-import { ICONS_FOOTER } from "constant/icon";
-import Link from "next/link";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -20,15 +20,14 @@ export const Footer = () => {
   return (
     <Box as="footer" w="full" position={"relative"} bg="black">
       <Box bg="#F16623" w="full" h="full" position="static" overflow={"hidden"}>
-        {/* <Image
-          src="/assets/logo/bullrun-logo.png"
+        <Image
+          src="/assets/dashboard/bg-billboard.png"
           alt="background-footer"
           loading="lazy"
-          placeholder="blur"
           style={{ objectFit: "cover" }}
           priority={false}
           fill
-        /> */}
+        />
         <Container maxW="container.lg" py={"2rem"} px={30}>
           <Flex
             justify={"center"}
@@ -67,7 +66,7 @@ export const Footer = () => {
                   sizes="(max-width: 768px) 100vw,"
                   fill
                   loading="lazy"
-                  src={"/assets/logo/bullrun-logo.png"}
+                  src={"/assets/logo/footer-logo.png"}
                   alt="logo-image"
                   priority={false}
                 />
@@ -87,7 +86,7 @@ export const Footer = () => {
       </Box>
       <Flex justify={"center"} py={2}>
         <Text fontSize={{ base: "sm", sm: "md" }}>
-          &#169; {new Date().getFullYear()} BULLCUAN, All right reserved
+          &#169; {new Date().getFullYear()} SUPER BULLRUN, All right reserved
         </Text>
       </Flex>
     </Box>
