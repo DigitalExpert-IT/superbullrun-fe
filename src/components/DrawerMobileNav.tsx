@@ -1,7 +1,7 @@
 import React from "react";
-// import Link from "next/link";
+import Link from "next/link";
 import { INavigation } from "constant/navigation";
-// import { ButtonConnectWallet } from "components";
+import { ButtonConnectWallet } from "components";
 import { useTranslation } from "react-i18next";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import Image from "next/image";
@@ -21,7 +21,6 @@ import {
   Collapse,
   Box,
   Button,
-  Link,
   Heading,
 } from "@chakra-ui/react";
 // import { useHasRoleAdmin } from "hooks/admin/useHasRoleAdmin";
@@ -33,7 +32,7 @@ interface MobileDrawerProps {
   data: INavigation[];
 }
 
-export const DrawerMobileNav: React.FC<MobileDrawerProps> = props => {
+export const DrawerMobileNav: React.FC<MobileDrawerProps> = (props) => {
   const { isOpen, onClose, data } = props;
   const { isOpen: openChild, onToggle } = useDisclosure();
   const { t } = useTranslation();
@@ -74,7 +73,7 @@ export const DrawerMobileNav: React.FC<MobileDrawerProps> = props => {
                     justifyContent="center"
                     display="flex"
                   >
-                    <Link href={item.href}>
+                    <Link href={`${item.href}`}>
                       <Text
                         fontWeight="400"
                         textTransform="uppercase"
@@ -102,7 +101,7 @@ export const DrawerMobileNav: React.FC<MobileDrawerProps> = props => {
                       {item.children &&
                         item.children.map((obj, id) => (
                           <Link
-                            key={"tahu" + id}
+                            key={id}
                             href={obj.link}
                             style={{
                               width: "100%",
@@ -130,8 +129,7 @@ export const DrawerMobileNav: React.FC<MobileDrawerProps> = props => {
             h="30%"
             alignItems={"center"}
           >
-            <Button>Connect Wallet</Button>
-            {/* <ButtonConnectWallet direction="column" /> */}
+            <ButtonConnectWallet direction="column" />
           </Stack>
         </DrawerBody>
       </DrawerContent>
